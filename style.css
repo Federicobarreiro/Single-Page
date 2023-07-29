@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #151515;
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header_p {
+    padding: 3vh;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+#header_div img {
+    padding: 2vw;
+}
+
+/*Main*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 10vh;
+}
+
+#main_imagen {
+    width: 50vw;
+}
+
+#main_h1 {
+    margin: 10vh 0 5vh 0;
+    color: #FFFFFF;
+}
+
+#main_p {
+    margin-bottom: 5vh;
+    color: #6D6D6D;
+}
+
+#main_a {
+    text-decoration: none;
+    color: #FFFFFF;
+    border-bottom: 2px solid #7FC7A9;
+    padding-bottom: 2vh;
+}
+
+#main_imagen_tablet {
+    display: none;
+}
+
+
+
+
+
+
+
+/*Responsive*/
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+/*Header*/
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #header_p {
+    font-size: 30px;
+  }
+
+/*Main*/
+
+#main_imagen {
+    display: none;
+}
+
+main {
+    text-align: left;
+    padding-left: 4vw;
+    display: grid;
+    grid-template-areas: "h1 imagen"
+                          "p imagen"
+                          "a imagen";
+}
+
+#main_h1 {
+    grid-area: h1;
+}
+
+#main_p {
+    grid-area: p;
+}
+
+#main_a {
+    grid-area: a;
+}
+
+#main_imagen_tablet {
+    grid-area: imagen;
+    display: block;
+    width: 100%;
+}
+
+
+}
+
+@media screen and (min-width: 769px) {
+  header{
+    padding: 0 10vw 0 10vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #header_p {
+    font-size: 15px;
+  }
+}    
