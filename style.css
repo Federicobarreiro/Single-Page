@@ -44,29 +44,34 @@ main {
 
 #main_h1 {
     margin: 10vh 0 5vh 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #FFFFFF;
+}
+
+b {
+    border-bottom: 3px solid #7FC7A9;
 }
 
 #main_p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5vh;
-    color: #6D6D6D;
+    color: #a4a4a4;
 }
 
 #main_a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     color: #FFFFFF;
-    border-bottom: 2px solid #7FC7A9;
-    padding-bottom: 2vh;
 }
+
 
 #main_imagen_tablet {
     display: none;
 }
 
-
-
-
-
+#main_imagen_desktop {
+    display: none;
+}
 
 
 /*Responsive*/
@@ -131,5 +136,41 @@ main {
 
   #header_p {
     font-size: 15px;
+    padding-left: 0;
   }
+
+  main {
+    text-align: left;
+    padding:  0vh 10vw;
+    display: grid;
+    grid-template-areas: "h1 imagen"
+                          "p imagen"
+                          "a imagen";
+}
+
+#main_h1 {
+    grid-area: h1;
+    font-size: 70PX;
+}
+
+#main_p {
+    grid-area: p;
+    font-size: 20px;
+    width: 50%;
+}
+
+#main_a {
+    grid-area: a;
+}
+
+#main_imagen {
+    display: none;
+}
+
+#main_imagen_desktop {
+    display: inline;
+    grid-area: imagen;
+    width: 100%;
+}
+
 }    
